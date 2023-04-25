@@ -1,0 +1,19 @@
+{
+  "name": "fml",
+  "version": "1.0.0",
+  "description": "NEL Api",
+  "main": "server.js",
+  "scripts": {
+    "dev":"nodemon server.js",
+    "start":"node server.js"
+  },
+  "author": "Alex Antoine",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.5",
+    "xlsx": "^0.18.5"
+  }
+}
