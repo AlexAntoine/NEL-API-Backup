@@ -1,0 +1,23 @@
+<%- include('partials/messages') -%>
+
+ <% employees.forEach((employee)=>{ %>
+                    <tr>
+                        <td><%= employee.name %></td>
+                        <td><%= employee.designation%></td>
+                        <td>$<%= employee.salary %></td>
+                        <td>
+                            <a href="edit/<%= employee.id%>" class="btn btn-primary">Edit</a>
+                            <form style="display: inline;" action="/delete/<%= employee.id%>?_method=DELETE" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button style="cursor:pointer" type="submit" class="btn btn-danger ml-2">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+
+edit/<%= employee.id%>
+/<%= employee.id%>?_method=DELETE
+
+working on rendering the home page
+
+css, bootstrap, and js file are not linking up properly.
