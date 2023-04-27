@@ -3,7 +3,7 @@ const colors = require('colors');
 const express = require('express');
 const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet')
-const xss = require('xss-clean');
+// const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
 const {localDb,prodDb} = require('./db/devices');
@@ -27,7 +27,7 @@ app.use(mongoSanitize());
 app.use(helmet());
 
 //Prevent XSS attacksd
-app.use(xss());
+// app.use(xss());
 
 //Prevent http param pollution
 app.use(hpp());
