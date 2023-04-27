@@ -27,10 +27,10 @@ app.use(mongoSanitize());
 app.use(helmet());
 
 //Prevent XSS attacksd
-// app.use(xss());
+app.use(xss());
 
 //Prevent http param pollution
-app.use(xss());
+app.use(hpp());
 
 //Enable CORS
 app.use(cors());
