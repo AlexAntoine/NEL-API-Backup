@@ -2,7 +2,7 @@ require('dotenv');
 const colors = require('colors');
 const express = require('express');
 const mongoSanitize = require('express-mongo-sanitize');
-const helmet = require('helment');
+const helmet = require('helmet')
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
@@ -24,7 +24,7 @@ prodDb();
 app.use(mongoSanitize());
 
 //Set security headers
-app.use(helemt());
+app.use(helmet());
 
 //Prevent XSS attacksd
 app.use(xss());
