@@ -19,6 +19,21 @@ mongoose.connect(process.env.PRODUCTION, {useNewUrlParser:true, useUnifiedTopolo
 // const reviews = JSON.parse(fs.readFileSync(`${__dirname}/_data/reviews.json`, 'utf-8'));
 
 
+// Import NEL Users
+const importNelUsers = async()=>{
+    try{
+        await NelUsers.create();
+
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
+
+        process.exit(1)
+    }
+}
+
 // Delete NEL Users
 const deleteNelUsers = async()=>{
     try{
@@ -79,7 +94,9 @@ switch(process.argv[2]){
     // case '-d':
     //     deleteData();
     //     break;
-
+    case '-inel':
+        importNelUsers();
+        break;
     case '-dnel':
         deleteNelUsers();
         break;
