@@ -20,7 +20,6 @@ const deviceRouter = require('./routes/devices.js');
 const oldRouter = require('./routes/oldDevices');
 const nelUsers = require('./routes/nelUsers');
 const deviceAge = require('./routes/deviceAge');
-const homePageRoute = require('./routes/home');
 
 app.use(express.json());
 
@@ -49,7 +48,6 @@ app.use(hpp());
 //Enable CORS
 app.use(cors());
 
-app.use(homePageRoute)
 app.use('/api/current',deviceRouter);
 app.use('/api/old',oldRouter);
 app.use('/api/deviceage', deviceAge);
