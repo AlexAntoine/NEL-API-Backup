@@ -20,4 +20,5 @@ edit/<%= employee.id%>
 
 working on rendering the home page
 
-css, bootstrap, and js file are not linking up properly.
+css, bootstrap, and js file are not linking up properly. -fixed
+
