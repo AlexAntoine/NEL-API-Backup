@@ -1,4 +1,4 @@
-require('dotenv').config({path:'.env'});
+require('dotenv').config({path:'./.env'});
 const fs = require('fs');
 const mongoose = require('mongoose');
 const colors = require('colors');
@@ -15,15 +15,18 @@ mongoose.connect(process.env.PRODUCTION, {useNewUrlParser:true, useUnifiedTopolo
 //READ JSON Files
 // const bootcamps = JSON.parse(fs.readFileSync(`${__dirname}/_data/bootcamps.json`, 'utf-8'));
 // const courses = JSON.parse(fs.readFileSync(`${__dirname}/_data/courses.json`, 'utf-8'));
-// const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/users.json`, 'utf-8'));
+const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
 // const reviews = JSON.parse(fs.readFileSync(`${__dirname}/_data/reviews.json`, 'utf-8'));
 
 
 // Import NEL Users
 const importNelUsers = async()=>{
     try{
-        await NelUsers.create();
-
+        const data  = await NelUsers.create(users);
+        
+        if(data != null){
+            console.log('Data Imported....'.green.inverse)
+        }
         process.exit(1);
 
     }catch(error){
@@ -37,7 +40,11 @@ const importNelUsers = async()=>{
 // Delete NEL Users
 const deleteNelUsers = async()=>{
     try{
+
         await NelUsers.deleteMany();
+        
+        console.log('Data Deleted...'.red.inverse);
+
         process.exit(1);
 
     }catch(error){
