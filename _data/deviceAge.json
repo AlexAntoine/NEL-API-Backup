@@ -1,0 +1,842 @@
+[
+  {
+    "DeviceName": "DESKTOP-CVGUMR0",
+    "ShipDate": "11/23/13"
+  },
+  {
+    "DeviceName": "DESKTOP-C34CJTH",
+    "ShipDate": "12/24/13"
+  },
+  {
+    "DeviceName": "RANDULTRABOOK",
+    "ShipDate": "4/10/14"
+  },
+  {
+    "DeviceName": "CNF-STRATEGY",
+    "ShipDate": "7/12/14"
+  },
+  {
+    "DeviceName": "NEC073114",
+    "ShipDate": "7/26/14"
+  },
+  {
+    "DeviceName": "DESKTOP-ATBHF75",
+    "ShipDate": "8/25/14"
+  },
+  {
+    "DeviceName": "Sales04-914",
+    "ShipDate": "9/12/14"
+  },
+  {
+    "DeviceName": "YOGA-03-2101",
+    "ShipDate": "9/12/14"
+  },
+  {
+    "DeviceName": "Sales03-914",
+    "ShipDate": "9/12/14"
+  },
+  {
+    "DeviceName": "CNF-DILIGENCE",
+    "ShipDate": "10/10/14"
+  },
+  {
+    "DeviceName": "CNF-FOCUS",
+    "ShipDate": "10/10/14"
+  },
+  {
+    "DeviceName": "SALES06-1014",
+    "ShipDate": "10/17/14"
+  },
+  {
+    "DeviceName": "YOGA-01-2101",
+    "ShipDate": "10/17/14"
+  },
+  {
+    "DeviceName": "YOGA-02-2101",
+    "ShipDate": "10/17/14"
+  },
+  {
+    "DeviceName": "YOGA2-1410-01",
+    "ShipDate": "10/17/14"
+  },
+  {
+    "DeviceName": "SALES09-1114",
+    "ShipDate": "10/23/14"
+  },
+  {
+    "DeviceName": "SALES10-1114",
+    "ShipDate": "10/23/14"
+  },
+  {
+    "DeviceName": "BACKUP01",
+    "ShipDate": "11/18/14"
+  },
+  {
+    "DeviceName": "OPTIMIZATION",
+    "ShipDate": "12/14/14"
+  },
+  {
+    "DeviceName": "ENG4C-2-2015",
+    "ShipDate": "1/28/15"
+  },
+  {
+    "DeviceName": "PM4C-03-2015",
+    "ShipDate": "2/11/15"
+  },
+  {
+    "DeviceName": "KC-102616",
+    "ShipDate": "6/23/15"
+  },
+  {
+    "DeviceName": "NTAYLOR-YOGA3",
+    "ShipDate": "7/21/15"
+  },
+  {
+    "DeviceName": "BETTE0815-LT",
+    "ShipDate": "7/28/15"
+  },
+  {
+    "DeviceName": "CNF-INNOVATION",
+    "ShipDate": "9/29/15"
+  },
+  {
+    "DeviceName": "CNF-COLLAB",
+    "ShipDate": "10/1/15"
+  },
+  {
+    "DeviceName": "CNF-DISCOVERY",
+    "ShipDate": "10/1/15"
+  },
+  {
+    "DeviceName": "PM120115",
+    "ShipDate": "10/20/15"
+  },
+  {
+    "DeviceName": "CNF-SYNERGY",
+    "ShipDate": "11/22/15"
+  },
+  {
+    "DeviceName": "FINANCE120115",
+    "ShipDate": "11/24/15"
+  },
+  {
+    "DeviceName": "MICROVELLUM-3AR",
+    "ShipDate": "1/7/16"
+  },
+  {
+    "DeviceName": "WAREHOUSE-KIOSK",
+    "ShipDate": "1/7/16"
+  },
+  {
+    "DeviceName": "LAPTOPENG2-9-16",
+    "ShipDate": "2/1/16"
+  },
+  {
+    "DeviceName": "IT021816",
+    "ShipDate": "2/11/16"
+  },
+  {
+    "DeviceName": "ANDREW-PC031716",
+    "ShipDate": "3/12/16"
+  },
+  {
+    "DeviceName": "BOB-LAP031416",
+    "ShipDate": "3/12/16"
+  },
+  {
+    "DeviceName": "I7353-1603-01",
+    "ShipDate": "3/12/16"
+  },
+  {
+    "DeviceName": "CLAYTON-032316",
+    "ShipDate": "3/15/16"
+  },
+  {
+    "DeviceName": "PETER-04-22-16",
+    "ShipDate": "4/18/16"
+  },
+  {
+    "DeviceName": "DESKTOP-5OGLIHN",
+    "ShipDate": "5/4/16"
+  },
+  {
+    "DeviceName": "DESKTOP-JO7ALF8",
+    "ShipDate": "5/4/16"
+  },
+  {
+    "DeviceName": "P3420-1605-01",
+    "ShipDate": "5/4/16"
+  },
+  {
+    "DeviceName": "NEL81816",
+    "ShipDate": "8/16/16"
+  },
+  {
+    "DeviceName": "MICROVELLUM-082",
+    "ShipDate": "8/23/16"
+  },
+  {
+    "DeviceName": "CNF-INGENUITY",
+    "ShipDate": "10/19/16"
+  },
+  {
+    "DeviceName": "SRV-PHYSDC",
+    "ShipDate": "11/3/16"
+  },
+  {
+    "DeviceName": "SRV-APP01",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-RDBROKER",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-RDGATEWAY",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-RDSHOST1",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-SECURITY",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-TIMBERLINE",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-XAVDA1",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-XAVDC",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-HYV01",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "SRV-HYV02",
+    "ShipDate": "11/10/16"
+  },
+  {
+    "DeviceName": "CNF-INSIGHT",
+    "ShipDate": "10/19/16"
+  },
+  {
+    "DeviceName": "NEL-08-31-16",
+    "ShipDate": "8/29/16"
+  },
+  {
+    "DeviceName": "LAPTOP-1-25-17",
+    "ShipDate": "1/22/17"
+  },
+  {
+    "DeviceName": "LAPTOP-1-24-17",
+    "ShipDate": "2/3/17"
+  },
+  {
+    "DeviceName": "DESKTOP-2-14-20",
+    "ShipDate": "2/10/17"
+  },
+  {
+    "DeviceName": "DESKTOP-3-1-17",
+    "ShipDate": "2/24/17"
+  },
+  {
+    "DeviceName": "DESKTOP-3-17-17",
+    "ShipDate": "3/16/17"
+  },
+  {
+    "DeviceName": "LAPTOP-3-21-17",
+    "ShipDate": "3/20/17"
+  },
+  {
+    "DeviceName": "DESKTOP-3-24-17",
+    "ShipDate": "3/22/17"
+  },
+  {
+    "DeviceName": "PM091417",
+    "ShipDate": "9/4/17"
+  },
+  {
+    "DeviceName": "ENG112017",
+    "ShipDate": "11/16/17"
+  },
+  {
+    "DeviceName": "DESKTOP-HT7L8K1",
+    "ShipDate": "3/6/18"
+  },
+  {
+    "DeviceName": "DESKTOP-O66343I",
+    "ShipDate": "6/13/18"
+  },
+  {
+    "DeviceName": "I7573-1806-01",
+    "ShipDate": "6/30/18"
+  },
+  {
+    "DeviceName": "DESKTOP-3HE7O4P",
+    "ShipDate": "6/30/18"
+  },
+  {
+    "DeviceName": "DESKTOP-7JECICL",
+    "ShipDate": "6/30/18"
+  },
+  {
+    "DeviceName": "DESKTOP-H3LRMFM",
+    "ShipDate": "6/30/18"
+  },
+  {
+    "DeviceName": "LAPTOP-OI3JC506",
+    "ShipDate": "7/5/18"
+  },
+  {
+    "DeviceName": "DESKTOP-3VB105O",
+    "ShipDate": "7/10/18"
+  },
+  {
+    "DeviceName": "DESKTOP-HU01SQ9",
+    "ShipDate": "8/16/18"
+  },
+  {
+    "DeviceName": "DESKTOP-VIOIFNR",
+    "ShipDate": "8/16/18"
+  },
+  {
+    "DeviceName": "CADLAPTOP2018",
+    "ShipDate": "9/16/18"
+  },
+  {
+    "DeviceName": "DESKTOP-ABC56AE",
+    "ShipDate": "10/25/18"
+  },
+  {
+    "DeviceName": "NC-EST-10-19",
+    "ShipDate": "11/26/18"
+  },
+  {
+    "DeviceName": "DESKTOP-ELKSGER",
+    "ShipDate": "1/29/19"
+  },
+  {
+    "DeviceName": "IT020119",
+    "ShipDate": "1/31/19"
+  },
+  {
+    "DeviceName": "BDLAPTOP2-22-19",
+    "ShipDate": "2/14/19"
+  },
+  {
+    "DeviceName": "I7586-1904-01",
+    "ShipDate": "4/11/19"
+  },
+  {
+    "DeviceName": "NC-OPS-06-19",
+    "ShipDate": "6/10/19"
+  },
+  {
+    "DeviceName": "AWAGNON-DT01",
+    "ShipDate": "6/20/19"
+  },
+  {
+    "DeviceName": "KTEAL-DT01",
+    "ShipDate": "6/20/19"
+  },
+  {
+    "DeviceName": "O7070-1906-01",
+    "ShipDate": "6/20/19"
+  },
+  {
+    "DeviceName": "LAPTOP-SALESNH",
+    "ShipDate": "8/20/19"
+  },
+  {
+    "DeviceName": "LAPTOP-APM-0919",
+    "ShipDate": "8/30/19"
+  },
+  {
+    "DeviceName": "LAPTOP-SALESNC-",
+    "ShipDate": "8/30/19"
+  },
+  {
+    "DeviceName": "SURFACE-PM-1019",
+    "ShipDate": "10/1/19"
+  },
+  {
+    "DeviceName": "MT-01-2020-01",
+    "ShipDate": "10/14/19"
+  },
+  {
+    "DeviceName": "NELD012020",
+    "ShipDate": "11/16/19"
+  },
+  {
+    "DeviceName": "NELD2020-1",
+    "ShipDate": "11/16/19"
+  },
+  {
+    "DeviceName": "CAD012020",
+    "ShipDate": "12/22/19"
+  },
+  {
+    "DeviceName": "ADM-01-2020-1",
+    "ShipDate": "12/23/19"
+  },
+  {
+    "DeviceName": "ADM-01-2020-2",
+    "ShipDate": "12/23/19"
+  },
+  {
+    "DeviceName": "ADM-01-2020-3",
+    "ShipDate": "12/23/19"
+  },
+  {
+    "DeviceName": "ADM-01-2020-4",
+    "ShipDate": "12/23/19"
+  },
+  {
+    "DeviceName": "PM-01-2020-01",
+    "ShipDate": "12/23/19"
+  },
+  {
+    "DeviceName": "PM-01-2020-02",
+    "ShipDate": "12/23/19"
+  },
+  {
+    "DeviceName": "PM-01-2020-03",
+    "ShipDate": "12/23/19"
+  },
+  {
+    "DeviceName": "PM-01-2020-04",
+    "ShipDate": "12/23/19"
+  },
+  {
+    "DeviceName": "EST-01-2020-01",
+    "ShipDate": "12/24/19"
+  },
+  {
+    "DeviceName": "EST-01-2020-02",
+    "ShipDate": "12/24/19"
+  },
+  {
+    "DeviceName": "EST-01-2020-03",
+    "ShipDate": "12/24/19"
+  },
+  {
+    "DeviceName": "EST-01-2020-04",
+    "ShipDate": "12/24/19"
+  },
+  {
+    "DeviceName": "LAPTOPNEC012020",
+    "ShipDate": "12/31/19"
+  },
+  {
+    "DeviceName": "LAPTOP-032020",
+    "ShipDate": "1/14/20"
+  },
+  {
+    "DeviceName": "RCLAPTOP032020",
+    "ShipDate": "1/14/20"
+  },
+  {
+    "DeviceName": "DESKTOP-B7VUR12",
+    "ShipDate": "3/15/20"
+  },
+  {
+    "DeviceName": "DRAFTING070120",
+    "ShipDate": "3/15/20"
+  },
+  {
+    "DeviceName": "I5491-2005-01",
+    "ShipDate": "5/15/20"
+  },
+  {
+    "DeviceName": "CNF-OPTIMIZ",
+    "ShipDate": "11/18/20"
+  },
+  {
+    "DeviceName": "DESKTOP-9JV9K4D",
+    "ShipDate": "5/15/20"
+  },
+  {
+    "DeviceName": "PMNC-070120",
+    "ShipDate": "6/2/20"
+  },
+  {
+    "DeviceName": "DESKTOP-2EOH2RV",
+    "ShipDate": "12/3/20"
+  },
+  {
+    "DeviceName": "I5406-2102-01",
+    "ShipDate": "12/3/20"
+  },
+  {
+    "DeviceName": "P3440-2102-01",
+    "ShipDate": "1/15/21"
+  },
+  {
+    "DeviceName": "P3440-2102-02",
+    "ShipDate": "1/15/21"
+  },
+  {
+    "DeviceName": "P3440-2102-03",
+    "ShipDate": "1/15/21"
+  },
+  {
+    "DeviceName": "O3080-2103-01",
+    "ShipDate": "3/10/21"
+  },
+  {
+    "DeviceName": "SURFPRO-2103-01",
+    "ShipDate": "3/11/21"
+  },
+  {
+    "DeviceName": "O7080-2103-01",
+    "ShipDate": "3/19/21"
+  },
+  {
+    "DeviceName": "O7080-2103-02",
+    "ShipDate": "3/19/21"
+  },
+  {
+    "DeviceName": "I5406-2103-01",
+    "ShipDate": "3/22/21"
+  },
+  {
+    "DeviceName": "I7706-2103-01",
+    "ShipDate": "3/22/21"
+  },
+  {
+    "DeviceName": "I5406-2105-01",
+    "ShipDate": "4/20/21"
+  },
+  {
+    "DeviceName": "O7080-2107-01",
+    "ShipDate": "4/28/21"
+  },
+  {
+    "DeviceName": "DSG-914",
+    "ShipDate": "12/15/08"
+  },
+  {
+    "DeviceName": "CADLAPTOP0311",
+    "ShipDate": "3/25/11"
+  },
+  {
+    "DeviceName": "LAPTOP0611",
+    "ShipDate": "6/11/11"
+  },
+  {
+    "DeviceName": "ENGMA011212",
+    "ShipDate": "12/27/11"
+  },
+  {
+    "DeviceName": "LAPTOP0512",
+    "ShipDate": "4/28/12"
+  },
+  {
+    "DeviceName": "ACCT110712",
+    "ShipDate": "10/12/12"
+  },
+  {
+    "DeviceName": "O7080-2107-02",
+    "ShipDate": "5/4/21"
+  },
+  {
+    "DeviceName": "EST042013",
+    "ShipDate": "3/13/13"
+  },
+  {
+    "DeviceName": "NELC91013",
+    "ShipDate": "3/13/13"
+  },
+  {
+    "DeviceName": "NELC-10052013",
+    "ShipDate": "9/21/13"
+  },
+  {
+    "DeviceName": "NEL102013-2",
+    "ShipDate": "10/7/13"
+  },
+  {
+    "DeviceName": "NEL102013-3",
+    "ShipDate": "10/7/13"
+  },
+  {
+    "DeviceName": "NEL102013-4",
+    "ShipDate": "10/7/13"
+  },
+  {
+    "DeviceName": "9DDGQ02-6-14",
+    "ShipDate": "6/19/14"
+  },
+  {
+    "DeviceName": "DSG092914",
+    "ShipDate": "6/19/14"
+  },
+  {
+    "DeviceName": "PM071614",
+    "ShipDate": "6/19/14"
+  },
+  {
+    "DeviceName": "ENG091914",
+    "ShipDate": "8/25/14"
+  },
+  {
+    "DeviceName": "MARKETING1014",
+    "ShipDate": "10/24/14"
+  },
+  {
+    "DeviceName": "REVIT2B-2015",
+    "ShipDate": "1/29/15"
+  },
+  {
+    "DeviceName": "ACC-02-2015",
+    "ShipDate": "2/12/15"
+  },
+  {
+    "DeviceName": "DSG-3-2015",
+    "ShipDate": "2/27/15"
+  },
+  {
+    "DeviceName": "ACCESS91815",
+    "ShipDate": "9/11/15"
+  },
+  {
+    "DeviceName": "ESTNC1015",
+    "ShipDate": "10/6/15"
+  },
+  {
+    "DeviceName": "BOB-031016-PC",
+    "ShipDate": "3/3/16"
+  },
+  {
+    "DeviceName": "O7080-2110-01",
+    "ShipDate": "5/4/21"
+  },
+  {
+    "DeviceName": "P3440-2106-01",
+    "ShipDate": "5/14/21"
+  },
+  {
+    "DeviceName": "P3440-2107-01",
+    "ShipDate": "5/14/21"
+  },
+  {
+    "DeviceName": "I5410-2107-01",
+    "ShipDate": "7/14/21"
+  },
+  {
+    "DeviceName": "I7506-2109-01",
+    "ShipDate": "9/3/21"
+  },
+  {
+    "DeviceName": "CNF-INGEN-1",
+    "ShipDate": "8/11/21"
+  },
+  {
+    "DeviceName": "CNF-INSIGHT-1",
+    "ShipDate": "8/11/21"
+  },
+  {
+    "DeviceName": "I5410-2111-01",
+    "ShipDate": "10/29/21"
+  },
+  {
+    "DeviceName": "I5410-2111-02",
+    "ShipDate": "10/29/21"
+  },
+  {
+    "DeviceName": "MARKETING2013",
+    "ShipDate": "1/15/13"
+  },
+  {
+    "DeviceName": "JOHN-LAP-062416",
+    "ShipDate": "6/20/16"
+  },
+  {
+    "DeviceName": "STEVE-LAP031216",
+    "ShipDate": "3/12/16"
+  },
+  {
+    "DeviceName": "JOHN-LAP-062416",
+    "ShipDate": "6/20/16"
+  },
+  {
+    "DeviceName": "SRV-WSUS01",
+    "ShipDate": "1/25/12"
+  },
+  {
+    "DeviceName": "I7610-2112-01",
+    "ShipDate": "11/1/20"
+  },
+  {
+    "DeviceName": "I5510-2112-01",
+    "ShipDate": "11/2/21"
+  },
+  {
+    "DeviceName": "O7090-2201-01",
+    "ShipDate": "1/5/22"
+  },
+  {
+    "DeviceName": "O7090-2201-02",
+    "ShipDate": "1/5/22"
+  },
+  {
+    "DeviceName": "XPS9710-2201-01",
+    "ShipDate": "12/30/21"
+  },
+  {
+    "DeviceName": "V5410-2201-01",
+    "ShipDate": "1/7/22"
+  },
+  {
+    "DeviceName": "P3450-2201-01",
+    "ShipDate": "1/22/22"
+  },
+  {
+    "DeviceName": "P3450-2201-02",
+    "ShipDate": "1/25/22"
+  },
+  {
+    "DeviceName": "P3450-2201-03",
+    "ShipDate": "1/25/22"
+  },
+  {
+    "DeviceName": "L3520-2202-02",
+    "ShipDate": "2/5/22"
+  },
+  {
+    "DeviceName": "I5410-2202-01",
+    "ShipDate": "2/4/22"
+  },
+  {
+    "DeviceName": "L3520-2202-03",
+    "ShipDate": "2/5/22"
+  },
+  {
+    "DeviceName": "L3520-2202-04",
+    "ShipDate": "2/5/22"
+  },
+  {
+    "DeviceName": "L3520-2202-01",
+    "ShipDate": "2/5/22"
+  },
+  {
+    "DeviceName": "I5410-2202-02",
+    "ShipDate": "2/4/22"
+  },
+  {
+    "DeviceName": "L3520-2202-05",
+    "ShipDate": "2/5/22"
+  },
+  {
+    "DeviceName": "P3450-2207-01",
+    "ShipDate": "3/18/22"
+  },
+  {
+    "DeviceName": "P3450-2207-02",
+    "ShipDate": "3/18/22"
+  },
+  {
+    "DeviceName": "CNF-DILIG-1",
+    "ShipDate": "3/11/22"
+  },
+  {
+    "DeviceName": "CNF-FOCUS-1",
+    "ShipDate": "2/7/23"
+  },
+  {
+    "DeviceName": "CNF-INSPIR-1",
+    "ShipDate": "2/4/22"
+  },
+  {
+    "DeviceName": "CNF-PROFIC-1",
+    "ShipDate": "2/4/22"
+  },
+  {
+    "DeviceName": "CNF-STRATEGY-1",
+    "ShipDate": "2/4/22"
+  },
+  {
+    "DeviceName": "ENGCAD042015",
+    "ShipDate": "4/10/15"
+  },
+  {
+    "DeviceName": "GEN-02-2015-01",
+    "ShipDate": "2/12/15"
+  },
+  {
+    "DeviceName": "I5410-2203-01",
+    "ShipDate": "3/23/22"
+  },
+  {
+    "DeviceName": "I7425-2204-01",
+    "ShipDate": "4/16/22"
+  },
+  {
+    "DeviceName": "I7506-2303-01",
+    "ShipDate": "9/3/21"
+  },
+  {
+    "DeviceName": "I7610-2203-01",
+    "ShipDate": "3/16/22"
+  },
+  {
+    "DeviceName": "L3500-1908-01",
+    "ShipDate": "8/30/19"
+  },
+  {
+    "DeviceName": "L5520-2211-01",
+    "ShipDate": "11/15/22"
+  },
+  {
+    "DeviceName": "L5520-2212-01",
+    "ShipDate": "12/22/22"
+  },
+  {
+    "DeviceName": "L5530-2303-01",
+    "ShipDate": "3/13/23"
+  },
+  {
+    "DeviceName": "L5591-2303-01",
+    "ShipDate": "6/10/19"
+  },
+  {
+    "DeviceName": "O3040-1610-01",
+    "ShipDate": "10/19/16"
+  },
+  {
+    "DeviceName": "O5090-2205-01",
+    "ShipDate": "5/18/22"
+  },
+  {
+    "DeviceName": "O7090-2203-01",
+    "ShipDate": "3/11/22"
+  },
+  {
+    "DeviceName": "O7090-2204-01",
+    "ShipDate": "4/1/22"
+  },
+  {
+    "DeviceName": "O7090-2209-01",
+    "ShipDate": "4/1/22"
+  },
+  {
+    "DeviceName": "P7760-2212-01",
+    "ShipDate": "11/29/22"
+  },
+  {
+    "DeviceName": "YOGA-4-2101-RW",
+    "ShipDate": "4/10/14"
+  },
+  {
+    "DeviceName": "ENG073014",
+    "ShipDate": "7/30/14"
+  }
+]

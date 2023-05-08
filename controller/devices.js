@@ -6,7 +6,7 @@ const CurrentDevices = require('../model/currentDevice');
 exports.getCurrentDevices = async(req, res, next)=>{
    
    const data = await CurrentDevices.find();
-
+   
    res.status(200).json({success:true, count:data.length, data});
 
 };

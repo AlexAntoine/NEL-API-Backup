@@ -8,6 +8,7 @@ const colors = require('colors');
 // const Bootcamp = require('./models/Bootcamp');
 // const Course = require('./models/Courses'); 
 const NelUsers = require('./model/nelUsers');
+const DeviceAge = require('./model/nelDevices');
 
 
 mongoose.connect(process.env.PRODUCTION, {useNewUrlParser:true, useUnifiedTopology: true})
@@ -15,7 +16,8 @@ mongoose.connect(process.env.PRODUCTION, {useNewUrlParser:true, useUnifiedTopolo
 //READ JSON Files
 // const bootcamps = JSON.parse(fs.readFileSync(`${__dirname}/_data/bootcamps.json`, 'utf-8'));
 // const courses = JSON.parse(fs.readFileSync(`${__dirname}/_data/courses.json`, 'utf-8'));
-const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
+// const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
+const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
 // const reviews = JSON.parse(fs.readFileSync(`${__dirname}/_data/reviews.json`, 'utf-8'));
 
 
@@ -54,6 +56,39 @@ const deleteNelUsers = async()=>{
     }
 }
 // Import into DB
+
+const importDeviceAge = async()=>{
+
+    try{
+        await DeviceAge.create(deviceAge);
+        
+        console.log('Data Imported...'.green.inverse);
+
+        process.exit(1);
+    }catch(error){ 
+        console.log(error);
+
+        process.exit(1);
+    }
+}
+
+const deleteDeviceAge = async()=>{
+
+    try{
+
+        await DeviceAge.deleteMany();
+
+        console.log('Data Deleted...'.red.inverse);
+
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
+
+        process.exit(1);
+    }
+}
 
 // const importData = async()=>{
 
@@ -106,5 +141,11 @@ switch(process.argv[2]){
         break;
     case '-dnel':
         deleteNelUsers();
+        break;
+    case '-ida':
+        importDeviceAge();
+        break;
+    case '-dda':
+        deleteDeviceAge();
         break;
 }
