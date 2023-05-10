@@ -2,7 +2,7 @@ require('dotenv');
 const colors = require('colors');
 const express = require('express');
 const mongoSanitize = require('express-mongo-sanitize');
-const helmet = require('helmet');
+const helmet = require('helmet')
 // const xss = require('xss-clean');
 const hpp = require('hpp');
 const path = require('path');
