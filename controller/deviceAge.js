@@ -31,3 +31,19 @@ exports.deleteSingleDevices = async(req, res, next)=>{
     res.json({scucess: true, data:{}})
 
 };
+
+// @desc Update Device
+// @route PUT /api/v1/current/:id
+// @access public
+exports.updateDevice = async(req, res, next)=>{
+    const {id} = req.params;
+
+   
+    const device = await DeviceAge.findByIdAndUpdate(id,req.body,{
+        new:true,
+        runValidators:true
+    });
+
+    res.status(200).json({success:true,device});
+
+};
