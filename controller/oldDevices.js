@@ -12,7 +12,7 @@ exports.getOldDevices = async(req, res, next)=>{
 // @desc Get a single old device for DB
 // @route Get /api/v1/old/:id
 // @access public
-exports.getSingleOldDevice = async()=>{
+exports.getSingleOldDevice = async(req,res)=>{
 
     const device = await OldDevices.findById(req.params.id);
 
@@ -25,7 +25,7 @@ exports.getSingleOldDevice = async()=>{
 exports.deleteSingleDevice = async(req, res, next)=>{
     const device = await OldDevices.findByIdAndDelete(req.params.id);
 
-    res.status(200).json({success:true,device:{}});
+    res.status(200).json({success:true,device});
 }
 
  
