@@ -6,12 +6,14 @@ const colors = require('colors');
 //Models
 const NelUsers = require('./model/nelUsers');
 const DeviceAge = require('./model/nelDevices');
+const CurrentDevices = require('./model/currentDevice');
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/fmlDb', {useNewUrlParser:true, useUnifiedTopology: true})
 
 //READ JSON Files
 const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
+const currentDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
 
 // Import NEL Users
 const importNelUsers = async()=>{
@@ -27,6 +29,41 @@ const importNelUsers = async()=>{
 
         console.log(error);
 
+        process.exit(1)
+    }
+}
+
+// Import Current Device
+const importCurrentDevice = async()=>{
+    try{
+        const data  = await CurrentDevices.create(currentDevice);
+        
+        if(data != null){
+            console.log('Data Imported....'.green.inverse)
+        }
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
+
+        process.exit(1)
+    }
+}
+
+// Delete NEL Users
+const deleteCurrentDevice = async()=>{
+    try{
+
+        await CurrentDevices.deleteMany();
+        
+        console.log('Data Deleted...'.red.inverse);
+
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
         process.exit(1)
     }
 }
@@ -47,8 +84,8 @@ const deleteNelUsers = async()=>{
         process.exit(1)
     }
 }
-// Import into DB
 
+// Import into DB
 const importDeviceAge = async()=>{
 
     try{
@@ -103,4 +140,11 @@ switch(process.argv[2]){
     case '-dda':
         deleteDeviceAge();
         break;
+    case '-icd':
+       importCurrentDevice();
+        break;
+    case '-dcd':
+        deleteCurrentDevice();
+            break;
+        
 }
