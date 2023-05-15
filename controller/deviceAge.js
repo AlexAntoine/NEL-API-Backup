@@ -32,8 +32,8 @@ exports.deleteSingleDevices = async(req, res, next)=>{
 
 };
 
-// @desc Update Device
-// @route PUT /api/v1/current/:id
+// @desc Update Device Age
+// @route PUT /api/v1/deviceage/:id
 // @access public
 exports.updateDevice = async(req, res, next)=>{
     const {id} = req.params;
