@@ -4,10 +4,10 @@ const fs = require('fs');
 const wb = xlsx.readFile('./_data/nelDevicesAge.xlsx', {dateaNF:'mm/dd/yyyy'});
 // console.log(wb.SheetNames);
 
-const ws = wb.Sheets["CurrentDevices"];
+const ws = wb.Sheets["OldDevices"];
 // console.log(ws);
 
 const data = xlsx.utils.sheet_to_json(ws,{raw:false});
 console.log(data);
 
-fs.writeFileSync('./_data/currentDevice.json', JSON.stringify(data, null, 2));
+fs.writeFileSync('./_data/olddevice.json', JSON.stringify(data, null, 2));
