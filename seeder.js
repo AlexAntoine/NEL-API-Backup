@@ -15,24 +15,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/fmlDb', {useNewUrlParser:true, useUn
 const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
 const currentDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
 const oldDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/olddevice.json`, 'utf-8'));
-
-// Import NEL Users
-const importNelUsers = async()=>{
-    try{
-        const data  = await NelUsers.create(users);
-        
-        if(data != null){
-            console.log('Data Imported....'.green.inverse)
-        }
-        process.exit(1);
-
-    }catch(error){
-
-        console.log(error);
-
-        process.exit(1)
-    }
-}
+const nelUsers= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
 
 // Import Current Device
 const importCurrentDevice = async()=>{
@@ -68,24 +51,7 @@ const deleteCurrentDevice = async()=>{
         process.exit(1)
     }
 }
-
-// Delete NEL Users
-const deleteNelUsers = async()=>{
-    try{
-
-        await NelUsers.deleteMany();
-        
-        console.log('Data Deleted...'.red.inverse);
-
-        process.exit(1);
-
-    }catch(error){
-
-        console.log(error);
-        process.exit(1)
-    }
-}
-
+ 
 // Import into DB
 const importDeviceAge = async()=>{
 
@@ -154,15 +120,43 @@ const deleteOldDevice = async()=>{
     }
 }
 
+//Import NEL USERS
+const importNelUsers = async()=>{
+
+    try{
+        await NelUsers.create(nelUsers);
+        
+        console.log('Data Imported...'.green.inverse);
+
+        process.exit(1);
+    }catch(error){ 
+        console.log(error);
+
+        process.exit(1);
+    }
+}
+
+// Delete NEL USERS
+const deleteNelUsers = async()=>{
+
+    try{
+
+        await NelUsers.deleteMany();
+
+        console.log('Data Deleted...'.red.inverse);
+
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
+
+        process.exit(1);
+    }
+}
+
 switch(process.argv[2]){
 
-    // case '-i':
-    //     importData();
-    // break
-
-    // case '-d':
-    //     deleteData();
-    //     break;
     case '-inel':
         importNelUsers();
         break;
@@ -186,5 +180,11 @@ switch(process.argv[2]){
             break;
     case '-dod':
         deleteOldDevice();
+            break;
+    case '-i':
+       importNelUsers();
+            break;
+    case '-d':
+        deleteNelUsers();
             break;
 }

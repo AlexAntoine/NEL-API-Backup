@@ -28,3 +28,20 @@ exports.deleteSingleNelUser = async(req, res, next)=>{
 
 };
 
+
+// @desc Update NEL Users
+// @route Update /api/v1/nelusers/:id
+// @access public
+exports.updateNelUsers = async(req, res, next)=>{
+    
+    const {id} = req.params;
+
+    const device = await NelUsers.findByIdAndUpdate(id,req.body,{
+        new:true,
+        runValidators:true
+    });
+
+    res.json({success:true,device})
+};
+
+
