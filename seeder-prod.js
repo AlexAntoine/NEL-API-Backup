@@ -4,22 +4,54 @@ const mongoose = require('mongoose');
 const colors = require('colors');
 
 //Models
-// const Reviews = require('./models/Reviews');
-// const Bootcamp = require('./models/Bootcamp');
-// const Course = require('./models/Courses'); 
 const NelUsers = require('./model/nelUsers');
 const DeviceAge = require('./model/nelDevices');
+const CurrentDevices = require('./model/currentDevice');
 
 
 mongoose.connect(process.env.PRODUCTION, {useNewUrlParser:true, useUnifiedTopology: true})
 
 //READ JSON Files
-// const bootcamps = JSON.parse(fs.readFileSync(`${__dirname}/_data/bootcamps.json`, 'utf-8'));
-// const courses = JSON.parse(fs.readFileSync(`${__dirname}/_data/courses.json`, 'utf-8'));
-// const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
-const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
-// const reviews = JSON.parse(fs.readFileSync(`${__dirname}/_data/reviews.json`, 'utf-8'));
 
+const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
+const currentDevice= JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
+// const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
+
+// Import Current Devices
+const importCurrentDevice = async()=>{
+    try{
+        const data  = await CurrentDevices.create(currentDevice);
+        
+        if(data != null){
+            console.log('Data Imported....'.green.inverse)
+        }
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
+
+        process.exit(1)
+    }
+}
+
+// Delete NEL Users
+const deleteCurrentDevice = async()=>{
+    try{
+
+        await CurrentDevices.deleteMany();
+        
+        console.log('Data Deleted...'.red.inverse);
+
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
+        process.exit(1)
+    }
+}
+ 
 
 // Import NEL Users
 const importNelUsers = async()=>{
@@ -129,13 +161,6 @@ const deleteDeviceAge = async()=>{
 
 switch(process.argv[2]){
 
-    // case '-i':
-    //     importData();
-    // break
-
-    // case '-d':
-    //     deleteData();
-    //     break;
     case '-inel':
         importNelUsers();
         break;
@@ -147,5 +172,11 @@ switch(process.argv[2]){
         break;
     case '-dda':
         deleteDeviceAge();
+        break;
+    case '-icd':
+        importCurrentDevice();
+        break;
+    case '-dcd':
+        deleteCurrentDevice();
         break;
 }
