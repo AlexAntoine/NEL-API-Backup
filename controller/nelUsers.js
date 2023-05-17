@@ -44,4 +44,19 @@ exports.updateNelUsers = async(req, res, next)=>{
     res.json({success:true,device})
 };
 
+// @desc Add Nel User
+// @route POST /api/v1/nelusers
+// @access public
+exports.addNelUsers = async(req, res, next)=>{
+    
+    const data = {
+        ...req.body
+    }
+
+    const result = await NelUsers.create(data);
+    console.log(result);
+
+    res.status(200).json({success:true, result})
+};
+
 
