@@ -1,9 +1,9 @@
 const express = require('express');
-const {getCurrentDevices,getSingleCurrentDevice, deleteSingleCurrentDevice, updateCurrentDevice} = require('../controller/devices');
+const {getCurrentDevices,getSingleCurrentDevice, deleteSingleCurrentDevice,addNewDevice, updateCurrentDevice} = require('../controller/devices');
 
 const router = express.Router();
 
-router.route('/').get(getCurrentDevices);
+router.route('/').get(getCurrentDevices).post(addNewDevice);
 router.route('/:id').get(getSingleCurrentDevice).delete(deleteSingleCurrentDevice).put(updateCurrentDevice);
 
 module.exports = router;

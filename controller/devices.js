@@ -46,4 +46,20 @@ exports.updateCurrentDevice =async(req, res, next)=>{
   res.status(200).json(device)
 }
 
+// @desc Add New Device
+// @route POST /api/v1/current/ 
+// @access public
+exports.addNewDevice =async(req, res, next)=>{
+   
+  const data = {
+   ...req.body
+  }
+
+  const device = await CurrentDevices.create(data);
+
+  res.status(200).json({success:true, device});
+}
+
+
+
 
