@@ -23,8 +23,8 @@ const deviceAge = require('./routes/deviceAge');
 
 app.use(express.json());
 
-// prodDb();
-localDb();
+prodDb();
+// localDb();
 
 //Rate Limiting
 const limiter = rateLimit({
