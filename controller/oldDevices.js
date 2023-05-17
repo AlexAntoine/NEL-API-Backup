@@ -39,8 +39,20 @@ exports.updateOldDevice= async(req, res, next)=>{
        runValidators:true
    });
 
-   res.status(200).json({success:true,device})
-
+   res.status(200).json({success:true,device});
 }
+
+// @desc Add Old Device
+// @route POST /api/v1/old
+// @access public
+exports.addOldDevice= async(req, res, next)=>{
+    const data = {
+        ...req.body
+    }
+
+    const device = await OldDevices.create(data);
+
+    res.status(200).json({success:true,device})
+ }
 
  
