@@ -47,3 +47,17 @@ exports.updateDevice = async(req, res, next)=>{
     res.status(200).json({success:true,device});
 
 };
+
+// @desc Add Device Age
+// @route POST /api/v1/deviceage
+// @access public
+exports.addDeviceAge = async(req, res,next) =>{
+   const data ={
+    ...req.body
+   }
+
+   const result = await DeviceAge.create(data);
+
+   res.status(200).json({success:true, result})
+   console.log(result);
+}
