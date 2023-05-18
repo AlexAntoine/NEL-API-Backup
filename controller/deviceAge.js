@@ -20,7 +20,7 @@ exports.getSingleDevice = async(req, res, next)=>{
 }
 
 // @desc Delete single device
-// @route Delete /api/v1/deviceage
+// @route Delete /api/v1/deviceage/:id
 // @access public
 exports.deleteSingleDevices = async(req, res, next)=>{
 
