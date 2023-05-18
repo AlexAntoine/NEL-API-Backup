@@ -18,7 +18,7 @@ exports.getSingleNelUser = async(req, res, next)=>{
 }
 
 // @desc Delete single Nel User
-// @route Delete /api/v1/neluusers
+// @route Delete /api/v1/neluusers/:id
 // @access public
 exports.deleteSingleNelUser = async(req, res, next)=>{
 
