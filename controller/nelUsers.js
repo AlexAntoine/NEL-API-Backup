@@ -22,8 +22,8 @@ exports.getSingleNelUser = async(req, res, next)=>{
 // @access public
 exports.deleteSingleNelUser = async(req, res, next)=>{
 
-    await NelUsers.findByIdAndDelete(req.params.id);
-
+    const user = await NelUsers.findByIdAndDelete(req.params.id);
+    console.log('users: ',user);
     res.json({scucess: true, data:{}})
 
 };
