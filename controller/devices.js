@@ -26,9 +26,9 @@ exports.getSingleCurrentDevice = async(req, res, next)=>{
 // @access public
 exports.deleteSingleCurrentDevice = async(req, res,next)=>{
 
-    const device = await CurrentDevices.findByIdAndDelete(req.params.id)
+   await CurrentDevices.findByIdAndDelete(req.params.id)
    
-   res.status(200).json({success:true,device:{}})
+   res.status(200).json({success:true,data:{}})
 }
 
 // @desc Update Current Device
