@@ -16,6 +16,7 @@ app.set('views', path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
 //Routes
+const registerRouter = require('./routes/register')
 const deviceRouter = require('./routes/devices.js');
 const oldRouter = require('./routes/oldDevices');
 const nelUsers = require('./routes/nelUsers');
@@ -49,6 +50,7 @@ app.use(hpp());
 //Enable CORS
 app.use(cors());
 
+app.use('/api/register',registerRouter)
 app.use('/api/current',deviceRouter);
 app.use('/api/old',oldRouter);
 app.use('/api/deviceage', deviceAge);
