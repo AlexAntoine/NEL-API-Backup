@@ -1,4 +1,5 @@
 const express = require('express');
+const auth =  require('../middleware/auth');
 const {getCurrentDevices,getSingleCurrentDevice, deleteSingleCurrentDevice,addNewDevice, updateCurrentDevice} = require('../controller/devices');
 
 const router = express.Router();
