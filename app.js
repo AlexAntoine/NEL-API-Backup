@@ -50,7 +50,7 @@ app.use(hpp());
 //Enable CORS
 app.use(cors());
 
-app.use('/api/register',registerRouter)
+app.use('/api/auth',registerRouter)
 app.use('/api/current',deviceRouter);
 app.use('/api/old',oldRouter);
 app.use('/api/deviceage', deviceAge);
