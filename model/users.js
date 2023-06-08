@@ -41,6 +41,22 @@ userSchema.methods.generateToken = async function(){
     return token;
 };
 
+userSchema.statics.findByCredentials = async(email,password)=>{
+    const user = await Users.findOne({email});
+
+    if(!user){
+        throw new Error('Your credentials do not macth our records')
+    }
+
+    const isMatched = await bcrypt.compare(password, user.password);
+
+    if(!isMatched){
+        throw new Error('Your credentials do not macth our records');
+    }
+
+    return user;
+}
+
 const Users = mongoose.model('users',userSchema);
 
 module.exports = Users;
