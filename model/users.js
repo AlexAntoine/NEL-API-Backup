@@ -30,15 +30,21 @@ userSchema.pre('save',async function(next){
 });
 
 userSchema.methods.generateToken = async function(){
+
     const user = this;
 
     const token = await jwt.sign({_id:user._id.toString()},'abcd');
+
+    if(!token){
+        throw new Error('Token could not be generated');
+    }
 
     user.tokens = user.tokens.concat({token});
 
     await user.save();
 
     return token;
+
 };
 
 userSchema.statics.findByCredentials = async(email,password)=>{
