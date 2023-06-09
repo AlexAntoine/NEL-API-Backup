@@ -11,7 +11,7 @@ const auth = async(req, res, next)=>{
         const user = await User.findOne({_id:decode._id,'tokens.token':token});
     
         if(!user){
-            throw new Error();
+            throw new Error('User cannot be found.');
         }
     
         req.token = token;
