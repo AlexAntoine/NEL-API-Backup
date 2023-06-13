@@ -46,3 +46,17 @@ exports.webRegister = async(req, res)=>{
 
    res.send({newUser, token});
 }
+
+exports.webLogin = async(req, res)=>{
+
+    try{
+        const user = await User.findByCredentialsWeb(req.body.email);
+
+        const token = await user.generateToken();
+    
+        res.send({user, token});
+    }catch(error){
+
+        res.status(404).send({error:error.message})
+    }
+}

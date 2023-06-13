@@ -63,21 +63,17 @@ userSchema.statics.findByCredentials = async(email,password)=>{
     return user;
 }
 
-// userSchema.statics.generateTokenWeb = async()=>{
-//     const user = this;
+userSchema.statics.findByCredentialsWeb = async(email)=>{
+    const user = await Users.findOne({email});
 
-//     const token = await jwt.sign({_id:user._id.toString()},'abcd');
+    if(!user){
+        throw new Error('Your credentials do not macth our records')
+    }
 
-//     if(!token){
-//         throw new Error('Token could not be generated');
-//     }
+    return user;
+}
 
-//     user.tokens = user.tokens.concat({token});
 
-//     await user.save();
-
-//     return token
-// }
 
 const Users = mongoose.model('users',userSchema);
 
