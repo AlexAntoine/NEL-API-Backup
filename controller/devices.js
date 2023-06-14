@@ -51,11 +51,21 @@ exports.updateCurrentDevice =async(req, res, next)=>{
 // @access public
 exports.addNewDevice =async(req, res, next)=>{
    
-  const data = {
-   ...req.body
-  }
 
-  const device = await CurrentDevices.create(data);
+   if(CurrentDevices.countDocuments({SerialNumber:req.body.SerialNumber})){
+   
+      const data = {
+         ...req.body
+      }
+   
+     const device = await CurrentDevices.create(data);
+      
+   }
+   else{
+      
+   }
+   
+ 
 
   res.status(200).json({success:true, device});
 }
