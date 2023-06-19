@@ -50,7 +50,7 @@ exports.webRegister = async(req, res)=>{
 exports.webLogin = async(req, res)=>{
 
     try{
-        const user = await User.findOne({email});
+        const user = await User.findOne({email:req.body.email});
 
         const token = await user.generateToken();
     
