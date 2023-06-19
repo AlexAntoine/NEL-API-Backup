@@ -51,7 +51,7 @@ exports.webLogin = async(req, res)=>{
 
     try{
         const user = await User.findOne({email:req.body.email});
-
+        console.log(user);
         const token = await user.generateToken();
     
         res.send({user, token});
