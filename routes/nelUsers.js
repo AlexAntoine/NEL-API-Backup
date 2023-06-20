@@ -4,7 +4,7 @@ const {getNelUsers, getSingleNelUser, deleteSingleNelUser,updateNelUsers, addNel
 
 const router = express.Router();
 
-router.route('/').get(auth, getNelUsers).post(addNelUsers);
-router.route('/:id').get(getSingleNelUser).delete(deleteSingleNelUser).put(updateNelUsers);
+router.route('/').get(auth, getNelUsers).post(auth,addNelUsers);
+router.route('/:id').get(auth,getSingleNelUser).delete(auth,deleteSingleNelUser).put(auth,updateNelUsers);
 
 module.exports = router;
