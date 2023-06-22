@@ -33,7 +33,7 @@ userSchema.methods.generateToken = async function(){
 
     const user = this;
 
-    const token = await jwt.sign({_id:user._id.toString()},'abcd');
+    const token = await jwt.sign({email:user.email.toString()},'abcd');
 
     if(!token){
         throw new Error('Token could not be generated');
