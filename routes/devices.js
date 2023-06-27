@@ -4,7 +4,7 @@ const {getCurrentDevices,getSingleCurrentDevice, deleteSingleCurrentDevice,addNe
 
 const router = express.Router();
 
-router.route('/').get(getCurrentDevices).post(addNewDevice);
-router.route('/:id').get(getSingleCurrentDevice).delete(deleteSingleCurrentDevice).put(updateCurrentDevice);
+router.route('/').get(auth,getCurrentDevices).post(auth,addNewDevice);
+router.route('/:id').get(auth,getSingleCurrentDevice).delete(auth,deleteSingleCurrentDevice).put(auth,updateCurrentDevice);
 
 module.exports = router;
