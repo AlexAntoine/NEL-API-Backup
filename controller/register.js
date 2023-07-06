@@ -51,11 +51,11 @@ exports.webLogin = async(req, res)=>{
 
     try{
         const user = await User.findOne({email:req.body.email});
-        console.log(user);
+        console.log('user: ',user);
 
         const token = await user.generateToken();
         console.log('token: ',token);
-        
+
         res.send({user, token});
     }catch(error){
 
