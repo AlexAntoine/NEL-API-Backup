@@ -13,8 +13,8 @@ mongoose.connect(process.env.PRODUCTION, {useNewUrlParser:true, useUnifiedTopolo
 
 //READ JSON Files
 
-const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
-const currentDevice= JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
+// const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
+// const currentDevice= JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
 // const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
 
 // Import Current Devices
@@ -36,19 +36,19 @@ const importCurrentDevice = async()=>{
 }
 
 // Delete NEL Users
-const deleteCurrentDevice = async()=>{
-    try{
+const deleteCurrentDevices = async()=>{
 
-        await CurrentDevices.deleteMany();
+    try {
         
-        console.log('Data Deleted...'.red.inverse);
+        const result = await CurrentDevices.deleteMany();
+        console.log('Current Devices Deleted...'.red.inverse);
 
+        console.log(result);
         process.exit(1);
-
-    }catch(error){
+    } catch (error) {
 
         console.log(error);
-        process.exit(1)
+        
     }
 }
  
@@ -122,43 +122,6 @@ const deleteDeviceAge = async()=>{
     }
 }
 
-// const importData = async()=>{
-
-//     try {
-//         await Bootcamp.create(bootcamps);
-//         await Course.create(courses);
-//         await User.create(users);
-//         await Reviews.create(reviews)
-
-//         console.log('Data imported...'.green.inverse)
-
-//         process.exit(1);
-//     } catch (error) {
-
-//         console.log(error);
-//         process.exit(1);
-//     }
-// }
-
-// //Delete Data
-
-// const deleteData = async()=>{
-
-//     try {
-//         await Bootcamp.deleteMany();
-//         await Course.deleteMany();
-//         await User.deleteMany();
-//         await Reviews.deleteMany();
-
-//         console.log('Data destroyed...'.red.inverse)
-
-//         process.exit(1);
-//     } catch (error) {
-
-//         console.log(error);
-//     }
-// }
-
 switch(process.argv[2]){
 
     case '-inel':
@@ -177,6 +140,6 @@ switch(process.argv[2]){
         importCurrentDevice();
         break;
     case '-dcd':
-        deleteCurrentDevice();
+        deleteCurrentDevices();
         break;
 }
