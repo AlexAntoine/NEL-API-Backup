@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const DeviceAge = require('./model/nelDevices');
 const fs = require("fs");
 
-mongoose.connect('mongodb+srv://admin:doras9070@nel-api-db.izyhkuf.mongodb.net/nel-api',{useNewUrlParser:true, useUnifiedTopology: true});
+mongoose.connect(process.env.PRODUCTION,{useNewUrlParser:true, useUnifiedTopology: true});
 
 const getData = async()=>{
 
