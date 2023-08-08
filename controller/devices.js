@@ -53,10 +53,11 @@ exports.addNewDevice =async(req, res, next)=>{
 
    try {
       const countDocs = await CurrentDevices.countDocuments({SerialNumber:req.body.SerialNumber})
-      // console.log(countDocs);
+      console.log('line 56 countdocs: ',countDocs);
 
       if(countDocs == 0){
-       
+         console.log('we are here');
+
          const data = {
             ...req.body
            }
@@ -66,6 +67,7 @@ exports.addNewDevice =async(req, res, next)=>{
            res.status(200).json({success:true, device});
       }
       else{
+         console.log('Line 70');
         let thisDevice = await CurrentDevices.findOne({SerialNumber:req.body.SerialNumber});
          thisDevice.ComputerName = req.body.ComputerName;
          thisDevice.Manufacturer = req.body.Manufacturer;
