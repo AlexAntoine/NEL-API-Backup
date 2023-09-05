@@ -21,6 +21,7 @@ const deviceRouter = require('./routes/devices.js');
 const oldRouter = require('./routes/oldDevices');
 const nelUsers = require('./routes/nelUsers');
 const deviceAge = require('./routes/deviceAge');
+const currentRecords = require('./routes/currentRecords');
 
 app.use(express.json());
 
@@ -55,6 +56,7 @@ app.use('/api/current',deviceRouter);
 app.use('/api/old',oldRouter);
 app.use('/api/deviceage', deviceAge);
 app.use('/api/nelusers',nelUsers);
+app.use('/api/records',currentRecords);
 
 
 module.exports = app;
