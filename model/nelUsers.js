@@ -28,8 +28,23 @@ const nelUsersSchema = new mongoose.Schema({
 
     Folder:{
         type:String
-    }
+    },
+
+    logged:[{
+        type:mongoose.Schema.Types.ObjectId,
+        name:String,
+        date:String,
+        ref:'currentDevices'
+    }],
+
 });
+
+nelUsersSchema.virtual('currentDevices',{
+    ref:'currentDevices',
+    localField:'',
+    foreignField:''
+});
+
 
 const NelUsers = mongoose.model('nelUsers', nelUsersSchema);
 

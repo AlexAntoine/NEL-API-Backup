@@ -79,7 +79,9 @@ const currentDevicesSchema = new mongoose.Schema({
 
     GetLastDeviceLogin:{
         type:String
-    }
+    },
+
+   
 
 });
 
