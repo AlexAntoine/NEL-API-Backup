@@ -14,8 +14,8 @@ mongoose.connect(process.env.LOCAL, {useNewUrlParser:true, useUnifiedTopology: t
 
 //READ JSON Files
 
-const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
-const currentDevice= JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
+// const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
+// const currentDevice= JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
 // const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
 const currentRecords = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentRecords.json`, 'utf-8'));
 
@@ -38,19 +38,19 @@ const importCurrentDevice = async()=>{
 }
 
 // Delete NEL Users
-const deleteCurrentDevice = async()=>{
-    try{
+const deleteCurrentDevices = async()=>{
 
-        await CurrentDevices.deleteMany();
+    try {
         
-        console.log('Data Deleted...'.red.inverse);
+        const result = await CurrentDevices.deleteMany();
+        console.log('Current Devices Deleted...'.red.inverse);
 
+        console.log(result);
         process.exit(1);
-
-    }catch(error){
+    } catch (error) {
 
         console.log(error);
-        process.exit(1)
+        
     }
 }
  
@@ -217,7 +217,7 @@ switch(process.argv[2]){
         importCurrentDevice();
         break;
     case '-dcd':
-        deleteCurrentDevice();
+        deleteCurrentDevices();
         break;
     case '-icr':
         importCurrentRecords();

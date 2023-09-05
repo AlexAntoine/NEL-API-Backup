@@ -9,7 +9,7 @@ const auth = async(req, res, next)=>{
         const decode = jwt.verify(token, 'abcd');
         console.log('decode: ', decode)
     
-        const user = await User.findOne({_id:decode._id,'tokens.token':token});
+        const user = await User.findOne({email:decode.email,'tokens.token':token});
         console.log('user: ', user)
         if(!user){
             throw new Error('User cannot be found.');
