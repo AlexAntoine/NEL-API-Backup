@@ -53,7 +53,7 @@ exports.addNewDevice =async(req, res, next)=>{
 
    const {id} = req.params;
 
-   const device = await NelUsers.findByIdAndUpdate(id,req.body,{
+   const device = await CurrentDevices.findByIdAndUpdate(id,req.body,{
        new:true,
        runValidators:true
    });
