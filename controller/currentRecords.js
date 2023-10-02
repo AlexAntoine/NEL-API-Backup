@@ -4,9 +4,7 @@ const CurrentRecords = require('../model/currentRecords');
 // @route Get /api/records
 // @access public
 exports.getAllCurrentRecords = async(req, res)=>{
-    const data = await CurrentRecords.find();
-
-    res.status(200).json({success:true, count:data.length,data});
+    res.status(200).json(res.advancedResults);
 }
 
 // @desc Get Single Current Record

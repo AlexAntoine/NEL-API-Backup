@@ -5,6 +5,9 @@
     "compName": "IT020119;IT021816",
     "SamAccountName": "chip",
     "UserPrincipalName": "chip@newenglandlab.com",
+    "login":{
+      
+    },
     "Office": "Boston",
     "Title": "Integration Engineer",
     "Folder": "OU=DeveloperUsers,OU=Users,OU=New England Lab,DC=newenglandlab,DC=local"
