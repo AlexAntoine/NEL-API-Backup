@@ -10,7 +10,7 @@ const CurrentDevices = require('./model/currentDevice');
 const CurrentRecords = require('./model/currentRecords');
 
 
-mongoose.connect('mongodb+srv://admin:doras9070@nel-api-db.izyhkuf.mongodb.net/nel-api', {useNewUrlParser:true, useUnifiedTopology: true})
+mongoose.connect(process.env.LOCAL, {useNewUrlParser:true, useUnifiedTopology: true})
 
 //READ JSON Files
 
