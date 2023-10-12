@@ -85,7 +85,7 @@ userSchema.statics.findByCredentialsWeb = async(email)=>{
     const user = await Users.findOne({email});
 
     if(!user){
-        throw new Error('Your credentials do not macth our records')
+        throw new Error('Your credentials do not match our records')
     }
 
     return user;
