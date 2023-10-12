@@ -51,12 +51,11 @@ exports.updateCurrentDevice =async(req, res, next)=>{
 // @access public
 exports.addNewDevice =async(req, res, next)=>{
 
-   const {id} = req.params;
+   const data ={
+      ...req.body
+   }   
 
-   const device = await CurrentDevices.findByIdAndUpdate(id,req.body,{
-       new:true,
-       runValidators:true
-   });
+   const device = await CurrentDevices.create(data);
 
    res.json({success:true,device})
   

@@ -2,7 +2,7 @@ const xlsx = require('xlsx');
 const fs = require('fs');
 
 const wb = xlsx.readFile('./_data/currentRecords.xlsx', {dateaNF:'mm/dd/yyyy'});
-// console.log(wb.SheetNames);
+console.log(wb.SheetNames);
 
 const ws = wb.Sheets["CurrentRecords"];
 // console.log(ws);
