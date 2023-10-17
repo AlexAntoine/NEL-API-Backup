@@ -1,4 +1,5 @@
 const NelUsers = require('../model/nelUsers');
+const deleteAllNelUser = require('../utils/delete');
 
 // @desc Get all Nel Users
 // @route Get /api/v1/nelusers
@@ -59,4 +60,8 @@ exports.addNelUsers = async(req, res, next)=>{
     res.status(200).json({success:true, result})
 };
 
+exports.deleteNelUser = async(req, res)=>{
+    const result = await deleteAllNelUser();
 
+    res.status(201).json({success:true, result})
+}

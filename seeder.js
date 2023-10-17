@@ -13,11 +13,11 @@ const CurrentRecords = require('./model/currentRecords');
 mongoose.connect('mongodb://127.0.0.1:27017/fmlDb', {useNewUrlParser:true, useUnifiedTopology: true})
 
 //READ JSON Files
-const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
-const currentDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
-const oldDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/olddevice.json`, 'utf-8'));
-const nelUsers= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
-const currentRecords = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentRecords.json`, 'utf-8'));
+// const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
+const currentDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevices.json`, 'utf-8'));
+// const oldDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/olddevice.json`, 'utf-8'));
+// const nelUsers= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
+// const currentRecords = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentRecords.json`, 'utf-8'));
 
 // Import Current Device
 const importCurrentDevice = async()=>{

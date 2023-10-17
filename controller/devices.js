@@ -1,5 +1,5 @@
 const CurrentDevices = require('../model/currentDevice');
-const deleteAllCurrentDevices = require('../utils/delete');
+const {deleteAllCurrentDevices} = require('../utils/delete');
 
 // @desc Get all current devices for DB
 // @route Get /api/v1/current
@@ -66,7 +66,10 @@ exports.addNewDevice =async(req, res, next)=>{
 // @route DELETE /api/v1/current/ 
 // @access private
 exports.deleteEverything = async(req, res, next)=>{
-   deleteAllCurrentDevices();
+   const device = await deleteAllCurrentDevices();
+
+   res.status(201).json({success:true, device})
+   
 }
 
 

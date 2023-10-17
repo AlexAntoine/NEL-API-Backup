@@ -1,4 +1,5 @@
 const DeviceAge = require('../model/nelDevices');
+const deleteAllNelDevices = require('../utils/delete');
 
 // @desc Get all current devices for DB
 // @route Get /api/v1/current
@@ -60,4 +61,11 @@ exports.addDeviceAge = async(req, res,next) =>{
 
    res.status(200).json({success:true, result})
    console.log(result);
+}
+
+exports.deleteNelDevices =async(req, res)=>{
+
+    const device = await deleteAllNelDevices();
+
+    res.status(201).json({success:true, device})
 }

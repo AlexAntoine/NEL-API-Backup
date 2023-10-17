@@ -1,4 +1,5 @@
 const CurrentRecords = require('../model/currentRecords');
+const deleteCurrentRecords = require('../utils/delete');
 
 // @desc Get All Current Records
 // @route Get /api/records
@@ -52,6 +53,17 @@ exports.deleteSingleRecord = async(req, res, next)=>{
 
     await CurrentRecords.findByIdAndDelete(req.params.id);
 
-    res.json({scucess: true, data:{}})
+    res.status(201).json({scucess: true, data:{}})
+
+};
+
+// @desc Delete single Record
+// @route Delete /api/records/:id
+// @access public
+exports.deleteAllCurrentRecords = async(req, res, next)=>{
+
+   const result = await deleteCurrentRecords();
+
+   res.status(200).json({success:true, result})
 
 };
