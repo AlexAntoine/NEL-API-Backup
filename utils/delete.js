@@ -1,17 +1,52 @@
 const CurrentDevices = require('../model/currentDevice');
+const DeviceAge = require('../model/nelDevices');
+const NelUsers = require('../model/nelUsers');
 
-exports.deleteAllCurrentDevices = async(req, res)=>{
+const deleteAllCurrentDevices = async(req, res)=>{
 
     try {
         const device = await CurrentDevices.deleteMany();
 
-        return res.status(202).json({success:true, device})
+        return device;
 
     } catch (error) {
         
         console.log(error);
 
-       return res.status(500).json({success:false,message:'Unable to preform action'});
     }
    
+}
+
+const deleteAllNelDevices = async(req, res)=>{
+
+    try {
+        const device = await DeviceAge.deleteMany();
+
+        return device;
+
+    } catch (error) {
+        
+        console.log(error);
+
+    }
+}
+
+const deleteAllNelUser = async(req, res)=>{
+
+    try {
+        const device = await NelUsers.deleteMany();
+
+        return device;
+
+    } catch (error) {
+        
+        console.log(error);
+
+    }
+}
+
+module.exports = {
+    deleteAllCurrentDevices,
+    deleteAllNelDevices,
+    deleteAllNelUser
 }
