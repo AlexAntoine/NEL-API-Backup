@@ -26,7 +26,6 @@ const currentRecords = require('./routes/currentRecords');
 app.use(express.json());
 
 prodDb();
-// localDb();
 
 //Rate Limiting
 const limiter = rateLimit({
