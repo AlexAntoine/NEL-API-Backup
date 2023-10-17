@@ -6,7 +6,7 @@ const advancedResult = require('../middleware/advancedResult');
 
 const router = express.Router();
 
-router.route('/').get(advancedResult(CurrentRecords),getAllCurrentRecords).post(addNewRecord);
+router.route('/').get(advancedResult(CurrentRecords),getAllCurrentRecords).post(addNewRecord).delete();
 router.route('/:id').get(getSingleRecord).delete(deleteSingleRecord)
 
 module.exports = router;
