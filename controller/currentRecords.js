@@ -1,5 +1,5 @@
 const CurrentRecords = require('../model/currentRecords');
-const deleteAllCurrentRecords = require('../utils/delete');
+const deleteCurrentRecords = require('../utils/delete');
 
 // @desc Get All Current Records
 // @route Get /api/records
@@ -62,7 +62,7 @@ exports.deleteSingleRecord = async(req, res, next)=>{
 // @access public
 exports.deleteAllCurrentRecords = async(req, res, next)=>{
 
-   const result = await deleteAllCurrentRecords();
+   const result = await deleteCurrentRecords();
 
    res.status(200).json({success:true, result})
 

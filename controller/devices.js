@@ -1,5 +1,5 @@
 const CurrentDevices = require('../model/currentDevice');
-const deleteAllCurrentDevices = require('../utils/delete');
+const {deleteAllCurrentDevices} = require('../utils/delete');
 
 // @desc Get all current devices for DB
 // @route Get /api/v1/current

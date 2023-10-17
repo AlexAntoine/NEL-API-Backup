@@ -1,6 +1,22 @@
 const CurrentDevices = require('../model/currentDevice');
 const DeviceAge = require('../model/nelDevices');
 const NelUsers = require('../model/nelUsers');
+const CurrentRecords = require('../model/currentRecords')
+
+const deleteCurrentRecords = async(req, res)=>{
+
+    try {
+        const device = await CurrentRecords.deleteMany();
+
+        return device;
+
+    } catch (error) {
+        
+        console.log(error);
+
+    }
+   
+}
 
 const deleteAllCurrentDevices = async(req, res)=>{
 
@@ -48,5 +64,6 @@ const deleteAllNelUser = async(req, res)=>{
 module.exports = {
     deleteAllCurrentDevices,
     deleteAllNelDevices,
-    deleteAllNelUser
+    deleteAllNelUser,
+    deleteCurrentRecords
 }
