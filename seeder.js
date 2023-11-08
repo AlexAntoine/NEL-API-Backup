@@ -9,6 +9,7 @@ const DeviceAge = require('./model/nelDevices');
 const CurrentDevices = require('./model/currentDevice');
 const OldDevices = require('./model/oldDevices');
 const CurrentRecords = require('./model/currentRecords');
+const CurrentRecordTest = require('./model/currentRecordTest');
 
 mongoose.connect('mongodb://127.0.0.1:27017/fmlDb', {useNewUrlParser:true, useUnifiedTopology: true})
 
@@ -18,6 +19,7 @@ const currentDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevi
 // const oldDevice = JSON.parse(fs.readFileSync(`${__dirname}/_data/olddevice.json`, 'utf-8'));
 // const nelUsers= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
 // const currentRecords = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentRecords.json`, 'utf-8'));
+// const currentRecordsTest = JSON.parse(fs.readFileSync(`${__dirname}/_data/test.json`, 'utf-8'));
 
 // Import Current Device
 const importCurrentDevice = async()=>{
@@ -193,6 +195,43 @@ const deleteCurrentRecords = async()=>{
         process.exit(1);
     }
 }
+ 
+// Import Current Records 2
+const importCurrentRecordsTest = async()=>{
+    try{
+        const data  = await CurrentRecordTest.create(currentRecordsTest);
+        
+        if(data != null){
+            console.log('Data Imported....'.green.inverse)
+        }
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
+
+        process.exit(1)
+    }
+}
+
+// Delete Current Records 2
+const deleteCurrentRecordTest = async()=>{
+
+    try{
+
+        await CurrentRecordTest.deleteMany();
+
+        console.log('Data Deleted...'.red.inverse);
+
+        process.exit(1);
+
+    }catch(error){
+
+        console.log(error);
+
+        process.exit(1);
+    }
+}
 switch(process.argv[2]){
 
     case '-inel':
@@ -230,5 +269,11 @@ switch(process.argv[2]){
             break;
     case '-dcr':
         deleteCurrentRecords();
+            break;
+    case '-icr2':
+        importCurrentRecordsTest();
+            break;
+    case '-dcr2':
+        deleteCurrentRecordTest();
             break;
 }

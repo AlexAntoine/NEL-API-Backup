@@ -1,0 +1,41 @@
+[
+    {
+      "jbazemore": [
+        {
+          "DeviceName": "ADM-01-2020-1",
+          "LoginCount": "3",
+          "Date": "8/28/23"
+        },
+        {
+          "DeviceName": "ADM-01-2020-1",
+          "LoginCount": "2",
+          "Date": "8/25/23"
+        },
+        {
+          "DeviceName": "ADM-01-2020-1",
+          "LoginCount": "1",
+          "Date": "8/23/23"
+        }
+        ]
+    },
+
+    {
+        "aantoine": [
+          {
+            "DeviceName": "O7090-2201-01",
+            "LoginCount": "4",
+            "Date": "8/28/23"
+          },
+          {
+            "DeviceName": "O7090-2201-01",
+            "LoginCount": "5",
+            "Date": "8/25/23"
+          },
+          {
+            "DeviceName": "O7090-2201-01",
+            "LoginCount": "2",
+            "Date": "8/24/23"
+          }
+            ]
+    }
+]

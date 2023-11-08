@@ -60,4 +60,42 @@ Update Current Device
       res.status(400).send({error:error.message})
    }
 
-Add Pagination
+Add Pagination - dotenv
+
+const originalData =[
+    
+    {
+        "UserName": "jbazemore",
+        "DeviceName": "ADM-01-2020-1",
+        "LoginCount": "3",
+        "Date": "8/28/23"
+      },
+
+      {
+        "UserName": "kpatterson",
+        "DeviceName": "ADM-01-2020-4",
+        "LoginCount": "3",
+        "Date": "8/28/23"
+      },
+
+      {
+        "UserName": "kpatterson",
+        "DeviceName": "ADM-01-2020-4",
+        "LoginCount": "6",
+        "Date": "10/28/23"
+      },
+      {
+        "UserName": "lynda",
+        "DeviceName": "AWAGNON-DT01",
+        "LoginCount": "5",
+        "Date": "8/28/23",
+        "Client": "LAPTOP-4OOUI85K"
+      },
+      {
+        "UserName": "lynda",
+        "DeviceName": "AWAGNON-DT01",
+        "LoginCount": "3",
+        "Date": "8/23/23",
+        "Client": "LAPTOP-4OOUI85K"
+      }
+]

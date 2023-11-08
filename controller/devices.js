@@ -50,16 +50,41 @@ exports.updateCurrentDevice =async(req, res, next)=>{
 // @desc Add New Device
 // @route POST /api/v1/current/ 
 // @access public
-exports.addNewDevice =async(req, res, next)=>{
+exports.updateDataFromLogon =async(req, res, next)=>{
 
-   const data ={
-      ...req.body
-   }   
+   try {
+      const countDocs = await CurrentDevices.countDocuments({SerialNumber:req.body.SerialNumber})
+      // console.log(countDocs);
 
-   const device = await CurrentDevices.create(data);
+      if(countDocs == 0){
+       
+         const data = {
+            ...req.body
+           }
+         
+           const device = await CurrentDevices.create(data);
+         
+           res.status(200).json({success:true, device});
+      }
+      else{
+        let thisDevice = await CurrentDevices.findOne({SerialNumber:req.body.SerialNumber});
+         thisDevice.ComputerName = req.body.ComputerName;
+         thisDevice.Manufacturer = req.body.Manufacturer;
+         thisDevice.ModelNumber = req.body.ModelNumber;
+         thisDevice.OsVersion = req.body.OsVersion;
+         thisDevice.ChassisTypesRaw = req.body.ChassisTypesRaw;
+         thisDevice.LastLogin = req.body.LastLogin;
+         thisDevice.GetLastDeviceLogin = req.body.GetLastDeviceLogin;
+   
+         thisDevice.save();
+   
+         res.status(200).json({success:true, thisDevice});
+      }
 
-   res.json({success:true,device})
-  
+      } catch (error) {
+         res.status(400).send({error:error.message})
+      }
+
 }
 
 // @desc Delete all current device from db
