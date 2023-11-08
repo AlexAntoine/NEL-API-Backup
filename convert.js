@@ -8,6 +8,8 @@ const ws = wb.Sheets["CurrentDevices"];
 // console.log(ws);
 
 const data = xlsx.utils.sheet_to_json(ws,{raw:false});
-// console.log(data);
+console.log(data);
 
-fs.writeFileSync('./_data/currentDevices.json', JSON.stringify(data, null, 2));
+
+
+// fs.writeFileSync('./_data/currentDevices.json', JSON.stringify(data, null, 2));
