@@ -53,7 +53,7 @@ exports.deleteSingleRecord = async(req, res, next)=>{
 
     await CurrentRecords.findByIdAndDelete(req.params.id);
 
-    res.status(201).json({scucess: true, data:{}})
+    res.status(201).json({success: true, data:{}})
 
 };
 

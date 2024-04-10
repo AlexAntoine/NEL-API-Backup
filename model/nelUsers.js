@@ -30,19 +30,6 @@ const nelUsersSchema = new mongoose.Schema({
         type:String
     },
 
-    logged:[{
-        type:mongoose.Schema.Types.ObjectId,
-        name:String,
-        date:String,
-        ref:'currentDevices'
-    }],
-
-});
-
-nelUsersSchema.virtual('currentDevices',{
-    ref:'currentDevices',
-    localField:'',
-    foreignField:''
 });
 
 
