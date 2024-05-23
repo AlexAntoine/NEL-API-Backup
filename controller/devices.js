@@ -5,11 +5,7 @@ const {deleteAllCurrentDevices} = require('../utils/delete');
 // @route Get /api/v1/current
 // @access public
 exports.getCurrentDevices = async(req, res, next)=>{
-   
-   const data = await CurrentDevices.find();
-   
-   res.status(200).json({success:true, count:data.length, data});
-
+   res.status(200).json(res.advancedResults);
 };
 
 // @desc Get single current device
@@ -29,7 +25,7 @@ exports.deleteSingleCurrentDevice = async(req, res,next)=>{
 
    const result = await CurrentDevices.findByIdAndDelete(req.params.id)
    console.log('devices: ',result);
-   res.status(200).json({success:true,data:{}})
+   res.status(204).json({success:true,data:{}})
 }
 
 // @desc Update Current Device
@@ -75,7 +71,11 @@ exports.updateDataFromLogon =async(req, res, next)=>{
          thisDevice.ChassisTypesRaw = req.body.ChassisTypesRaw;
          thisDevice.LastLogin = req.body.LastLogin;
          thisDevice.GetLastDeviceLogin = req.body.GetLastDeviceLogin;
-   
+         
+         const log = Object.assign({date:req.body.LastLogin},{username:req.body.GetLastDeviceLogin});
+
+         thisDevice.logs.push(log);
+         
          thisDevice.save();
    
          res.status(200).json({success:true, thisDevice});

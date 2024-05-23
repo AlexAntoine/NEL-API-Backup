@@ -30,6 +30,12 @@ const nelUsersSchema = new mongoose.Schema({
         type:String
     },
 
+   device_logs:[{
+        computerName:String,
+        date:String,
+        client:String
+    }]
+
 });
 
 

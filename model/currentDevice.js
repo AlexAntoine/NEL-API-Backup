@@ -81,6 +81,18 @@ const currentDevicesSchema = new mongoose.Schema({
         type:String
     },
 
+    computerType:{
+        type:String,
+        enum:['regular','CAD','server'],
+        default:'regular'
+    },
+
+    logs:[{
+        username:String,
+        device:String,
+        client:String
+    }]
+
    
 
 });
