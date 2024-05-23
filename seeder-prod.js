@@ -10,14 +10,14 @@ const CurrentDevices = require('./model/currentDevice');
 const CurrentRecords = require('./model/currentRecords');
 
 
-mongoose.connect(process.env.LOCAL, {useNewUrlParser:true, useUnifiedTopology: true})
+mongoose.connect(process.env.PRODUCTION, {useNewUrlParser:true, useUnifiedTopology: true})
 
 //READ JSON Files
 
 // const users= JSON.parse(fs.readFileSync(`${__dirname}/_data/nelusers.json`, 'utf-8'));
-// const currentDevice= JSON.parse(fs.readFileSync(`${__dirname}/_data/currentDevice.json`, 'utf-8'));
+const currentDevice= JSON.parse(fs.readFileSync(`${__dirname}/_data/json/currentDevices.json`, 'utf-8'));
 // const deviceAge = JSON.parse(fs.readFileSync(`${__dirname}/_data/deviceAge.json`, 'utf-8'));
-const currentRecords = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentRecords.json`, 'utf-8'));
+// const currentRecords = JSON.parse(fs.readFileSync(`${__dirname}/_data/currentRecords.json`, 'utf-8'));
 
 // Import Current Devices
 const importCurrentDevice = async()=>{
